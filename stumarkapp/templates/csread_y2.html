@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    th {
+        text-align: center;
+    }
+    td {
+        text-align: center;
+    }
+</style>
+
+<a href="http://127.0.0.1:8000/viewmark"><button> Change year</button></a>
+<h3 align="center">SEMESTER 3</h3>
+<table cellpadding="10px" align="center" width="100%">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Reg.No</th>
+        <th>Class</th>
+        <th>Subject 11</th>
+        <th>Subject 12</th>
+        <th>Subject 13</th>
+        <th>Subject 14</th>
+        <th>Subject 15</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Pass or Fail</th>
+        <th>Result</th>
+    </tr>
+    {% for de in sem3 %}
+    <tr>
+        <td>{{ de.id }}</td>
+        <td>{{ de.stuname }}</td>
+        <td>{{ de.regno }}</td>
+        <td>{{ de.stuclass }}</td>
+        <td>{{ de.sub11 }}</td>
+        <td>{{ de.sub12 }}</td>
+        <td>{{ de.sub13 }}</td>
+        <td>{{ de.sub14 }}</td>
+        <td>{{ de.sub15 }}</td>
+        <td>{{ de.tot }}</td>
+        <td>{{ de.per }}</td>
+        <td>{{ de.psfil }}</td>
+        <td>{{ de.res }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th colspan="2"><a href="http://127.0.0.1:8000/nsem3"><button>NEW</button></a></th>
+        <th colspan="2"><a href="http://127.0.0.1:8000/usem3"><button>EDIT</button></a></th>
+        <th colspan="2"><a href="http://127.0.0.1:8000/dsem3"><button>DELETE</button></a></th>
+    </tr>
+</table>
+
+<h3 align="center">SEMESTER 4</h3>
+<table cellpadding="10px" align="center" width="100%">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Reg.No</th>
+        <th>Class</th>
+        <th>Subject 16</th>
+        <th>Subject 17</th>
+        <th>Subject 18</th>
+        <th>Subject 19</th>
+        <th>Subject 20</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Pass or Fail</th>
+        <th>Result</th>
+    </tr>
+    {% for se in sem4 %}
+    <tr>
+        <td>{{ se.id }}</td>
+        <td>{{ se.stuname }}</td>
+        <td>{{ se.regno }}</td>
+        <td>{{ se.stuclass }}</td>
+        <td>{{ se.sub16 }}</td>
+        <td>{{ se.sub17 }}</td>
+        <td>{{ se.sub18 }}</td>
+        <td>{{ se.sub19 }}</td>
+        <td>{{ se.sub20 }}</td>
+        <td>{{ se.tot }}</td>
+        <td>{{ se.per }}</td>
+        <td>{{ se.psfil }}</td>
+        <td>{{ se.res }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th colspan="2"><a href="http://127.0.0.1:8000/nsem4"><button>NEW</button></a></th>
+        <th colspan="2"><a href="http://127.0.0.1:8000/usem4"><button>EDIT</button></a></th>
+        <th colspan="2"><a href="http://127.0.0.1:8000/dsem4"><button>DELETE</button></a></th>
+    </tr>
+</table>
+{% endblock %}

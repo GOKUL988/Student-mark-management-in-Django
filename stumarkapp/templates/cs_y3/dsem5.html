@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block content %}
+<table cellpadding="10px" width="100%">
+    <tr>
+        <th>S.NO</th>
+        <th>Name</th>
+        <th>Register.No</th>
+        <th>Class</th>
+        <th>subject 21</th>
+         <th>subject 22</th>
+         <th>subject 23</th>
+         <th>subject 24</th>
+         <th>subject 25</th>
+     </tr>
+    {% for a in sem5%}
+    <tr>
+        <td>{{a.id}}</td>
+         <td>{{a.stuname}}</td>
+         <td>{{a.regno}}</td>
+         <td>{{a.stuclass}}</td>
+         <td>{{a.sub21}}</td>
+         <td>{{a.sub22}}</td>
+         <td>{{a.sub23}}</td>
+         <td>{{a.sub24}}</td>
+         <td>{{a.sub25}}</td>
+        <td><a href="http://127.0.0.1:8000/delsem5/{{a.id}}"><button>DELETE</button></a> </td>
+    </tr>
+    {% endfor%}
+    <a href="http://127.0.0.1:8000/csread_y3"><button>BACK TO LIST</button></a>
+</table>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <table cellpadding="15px" align="center">
+        <tr><th colspan="2">STUDENTS NEW ENTRY</th></tr>
+        <tr>
+            <td><label for="">STUDENT NAME</label></td>
+            <td><input type="text" name="stuname"> </td>
+        </tr>
+        <tr>
+             <td><label for="">REGISTER NO</label></td>
+            <td><input type="text" name="regno"> </td>
+        </tr>
+        <tr>
+             <td><label for="">CLASS</label></td>
+            <td><input type="text" name="stuclass"> </td>
+        </tr>
+        <tr>
+             <td><label for="">SUBJECT 6</label></td>
+            <td><input type="text" name="sub6"> </td>
+        </tr>
+        <tr>
+             <td><label for="">SUBJECT 7</label></td>
+            <td><input type="text" name="sub7"> </td>
+        </tr>
+        <tr>
+             <td><label for="">SUBJECT 8</label></td>
+            <td><input type="text" name="sub8"> </td>
+         </tr>
+        <tr>
+            <td><label for="">SUBJECT 9</label></td>
+            <td><input type="text" name="sub9"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 10</label></td>
+            <td><input type="text" name="sub10"> </td>
+        </tr>
+         <tr>
+            <td> </td>
+            <td><input type="submit" value="submit"> </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

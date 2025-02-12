@@ -1,0 +1,93 @@
+{% extends 'viewmark.html' %}
+{% block content %}
+<style>
+  th{
+  text-align:center;
+  }
+  td{
+  text-align:center;
+  }
+</style>
+<h5><a href="http://127.0.0.1:8000/viewmark"><button>Change year</button></a> </h5>
+<h3 align="center"> SEMESTER 1</h3>
+<table cellpadding="10px" width="100%">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Reg.No</th>
+    <th>Class</th>
+    <th>Subject 1</th>
+     <th>Subject 2</th>
+     <th>Subject 3</th>
+     <th>Subject 4</th>
+     <th>Subject 5</th>
+    <th>Total</th>
+    <th>Percentage</th>
+    <th>Pass or Fail</th>
+    <th>Result</th>
+
+  </tr>
+  {% for stu in students %}
+  <tr>
+    <td>{{ stu.id }}</td>
+    <td>{{ stu.stuname }}</td>
+    <td>{{ stu.regno }}</td>
+    <td>{{stu.stuclass}}</td>
+    <td>{{stu.sub1}}</td>
+    <td>{{stu.sub2}}</td>
+    <td>{{stu.sub3}}</td>
+    <td>{{stu.sub4}}</td>
+    <td>{{stu.sub5}}</td>
+    <td>{{stu.tot}}</td>
+    <td>{{stu.per}}</td>
+    <td>{{stu.psfil}}</td>
+    <td>{{stu.res}}</td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <th colspan="2"><a href=" http://127.0.0.1:8000/nsem1"><button>NEW</button></a> </th>
+     <th colspan="2"><a href="http://127.0.0.1:8000/usem1"><button>UPDATE</button></a> </th>
+     <th colspan="2"><a href="http://127.0.0.1:8000/dsem1"><button>DELETE</button></a> </th>
+  </tr>
+</table>
+<h3 align="center"> SEMESTER 2</h3>
+<table cellpadding="10px" width="100%">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Reg.No</th>
+    <th>Class</th>
+    <th>Subject 6</th>
+     <th>Subject 7</th>
+     <th>Subject 8</th>
+     <th>Subject 9</th>
+     <th>Subject 10</th>
+    <th>Total</th>
+    <th>Percentage</th>
+    <th>Pass or Fail</th>
+    <th>Result</th>
+  </tr>
+  {% for stu2 in semester2 %}
+  <tr>
+    <td>{{ stu2.id }}</td>
+    <td>{{ stu2.stuname }}</td>
+    <td>{{ stu2.regno }}</td>
+    <td>{{stu2.stuclass}}</td>
+    <td>{{stu2.sub6}}</td>
+    <td>{{stu2.sub7}}</td>
+    <td>{{stu2.sub8}}</td>
+    <td>{{stu2.sub9}}</td>
+    <td>{{stu2.sub10}}</td>
+    <td>{{stu2.tot}}</td>
+    <td>{{stu2.per}}</td>
+    <td>{{stu2.psfil}}</td>
+    <td>{{stu2.res}}</td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <th colspan="2"><a href="http://127.0.0.1:8000/nsem2"><button>NEW</button></a> </th>
+     <th colspan="2"><a href="http://127.0.0.1:8000/usem2"><button>UPDATE</button></a> </th>
+     <th colspan="2"><a href="http://127.0.0.1:8000/dsem2"><button>DELETE</button></a> </th>
+  </tr>
+</table>
+{% endblock %}

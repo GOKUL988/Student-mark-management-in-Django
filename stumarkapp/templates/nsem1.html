@@ -1,0 +1,45 @@
+{% extends 'readstu.html'%}
+{% block content %}
+<form method="post">
+    {%csrf_token%}
+    <table cellpadding="15px" align="center">
+        <tr> <th colspan="2">STUDENTS NEW ENTRY</th></tr>
+        <tr>
+            <td><label for=""> STUDENT NAME</label></td>
+            <td><input type="text" name="stuname"> </td>
+        </tr>
+        <tr>
+            <td><label for="">REGISTER NO</label></td>
+            <td><input type="text" name="regno"> </td>
+        </tr>
+        <tr>
+            <td><label for="">CLASS</label></td>
+            <td><input type="text" name="stuclass"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 1</label></td>
+            <td><input type="text" name="sub1"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 2</label></td>
+            <td><input type="text" name="sub2"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 3</label></td>
+            <td><input type="text" name="sub3"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 4</label></td>
+            <td><input type="text" name="sub4"> </td>
+        </tr>
+        <tr>
+            <td><label for="">SUBJECT 5</label></td>
+            <td><input type="text" name="sub5"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="submit"> </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

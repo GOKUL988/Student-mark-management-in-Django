@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% block content %}
+<table width="100%" cellpadding="10px">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Register No</th>
+    <th>Class</th>
+    <th>Subject 26</th>
+     <th>Subject 27</th>
+     <th>Subject 28</th>
+     <th>Subject 29</th>
+     <th>Subject 30</th>
+      <th>EDIT</th>
+  </tr>
+  {% for aa in sem6%}
+    <tr>
+        <td>{{aa.id}}</td>
+        <td>{{aa.stuname}}</td>
+        <td>{{aa.regno}}</td>
+        <td>{{aa.stuclass}}</td>
+        <td>{{aa.sub26}}</td>
+        <td>{{aa.sub27}}</td>
+        <td>{{aa.sub28}}</td>
+        <td>{{aa.sub29}}</td>
+        <td>{{aa.sub30}}</td>
+        <td><a href="http://127.0.0.1:8000/esem6/{{aa.id}}"><button>Edit</button></a></td>
+    </tr>
+    {% endfor %}
+    <a href="http://127.0.0.1:8000/csread_y3"><button>BACK TO LIST</button></a>
+</table>
+{% endblock %}
